@@ -19,7 +19,6 @@ public class PipeCreatorScript : MonoBehaviour
         {
             timer += Time.deltaTime;
             //display log
-            Debug.Log("Waiting to spawn pipe: " + timer);
         }
         else
         {
@@ -34,7 +33,6 @@ public class PipeCreatorScript : MonoBehaviour
                     
             timer = 0;
             //display log
-            Debug.Log("Pipe spawned at position: " + transform.position.x + ", " + Random.Range(minY, maxY));
         }
     }
 }

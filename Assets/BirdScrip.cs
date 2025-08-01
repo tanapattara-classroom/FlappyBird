@@ -18,4 +18,15 @@ public class BirdScrip : MonoBehaviour
             rigidbody.linearVelocity = Vector2.up * flyup;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("pipe"))
+        { 
+            FindFirstObjectByType<GameManager>().GameOver();
+        }
+        else if (collision.gameObject.CompareTag("score"))
+        { 
+            FindFirstObjectByType<GameManager>().IncreaseScore();
+        }
+    }
 }
